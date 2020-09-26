@@ -18,7 +18,7 @@ class MarvelCharacterController {
     static private let timestampKey = "ts"
     static private let timestamp = "today"
     static private let hashKey = "hash"
-    static private let privateKey = "ad601d78c1ebc1a65b90810252b7e2747656b5d0"
+    static private let privateKey = "PRIVATEKEY"
     
     //MARK: - Methods
     static func fetchMarvelCharacter(searchTerm: String, completion: @escaping (Result <MarvelCharacter, NetworkError>) -> Void) {
