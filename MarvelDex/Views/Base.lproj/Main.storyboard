@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HQ8-c5-Yv1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Marvel Character View Controller-->
+        <scene sceneID="MKj-em-Qa8">
+            <objects>
+                <viewController id="HQ8-c5-Yv1" customClass="MarvelCharacterViewController" customModule="MarvelDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k2V-8M-5rK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for you favorite hero!" translatesAutoresizingMaskIntoConstraints="NO" id="T0M-Ro-qjc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-7h-bl2">
+                                <rect key="frame" x="32" y="120.5" width="350" height="348"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="39t-fG-wRb"/>
+                                    <constraint firstAttribute="width" secondItem="gHf-7h-bl2" secondAttribute="height" multiplier="1:1" id="M9X-dT-iMm"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-e5-rAc">
+                                <rect key="frame" x="20.5" y="485.5" width="373" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(hero name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-sZ-UbF">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(hero description)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-YG-4PO">
+                                        <rect key="frame" x="0.0" y="38" width="373" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="65Q-0N-8EI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T0M-Ro-qjc" firstAttribute="leading" secondItem="65Q-0N-8EI" secondAttribute="leading" id="24S-vt-dk4"/>
+                            <constraint firstItem="Gcq-e5-rAc" firstAttribute="top" secondItem="gHf-7h-bl2" secondAttribute="bottom" constant="16" id="2ri-St-SCF"/>
+                            <constraint firstItem="Gcq-e5-rAc" firstAttribute="width" secondItem="65Q-0N-8EI" secondAttribute="width" multiplier="0.9" id="FVV-i5-CDV"/>
+                            <constraint firstItem="T0M-Ro-qjc" firstAttribute="trailing" secondItem="65Q-0N-8EI" secondAttribute="trailing" id="HGT-4c-sE7"/>
+                            <constraint firstItem="Gcq-e5-rAc" firstAttribute="centerX" secondItem="65Q-0N-8EI" secondAttribute="centerX" id="KVI-A0-lCD"/>
+                            <constraint firstItem="T0M-Ro-qjc" firstAttribute="top" secondItem="65Q-0N-8EI" secondAttribute="top" id="WcU-nj-6Cd"/>
+                            <constraint firstItem="gHf-7h-bl2" firstAttribute="centerY" secondItem="65Q-0N-8EI" secondAttribute="centerY" multiplier="0.65" id="qzi-nd-tf9"/>
+                            <constraint firstItem="gHf-7h-bl2" firstAttribute="centerX" secondItem="65Q-0N-8EI" secondAttribute="centerX" id="wO9-xc-5fz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="characterDescriptionLabel" destination="mhv-YG-4PO" id="pH9-Mt-Wla"/>
+                        <outlet property="characterNameLabel" destination="M2n-sZ-UbF" id="9fz-Ho-HQP"/>
+                        <outlet property="characterSearchBar" destination="T0M-Ro-qjc" id="4jI-db-49D"/>
+                        <outlet property="characterThumbnailImageView" destination="gHf-7h-bl2" id="sJi-VK-Nuh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVw-RQ-983" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1580" y="9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
